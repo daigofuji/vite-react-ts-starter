@@ -49,8 +49,9 @@ VITE_GA_ID=G-XXXXXXXXXX
 | `npm start` / `npm run dev` | Start dev server |
 | `npm run build` | TypeScript check + Vite build |
 | `npm run preview` | Preview production build locally |
-| `npm run lint` | Biome check — fails on lint or format issues |
-| `npm run format` | Biome check with auto-fix |
+| `npm run lint` | Check only — fails if anything's wrong (used in CI) |
+| `npm run lint:fix` | Apply safe lint + format fixes |
+| `npm run format` | Apply format fixes only, no lint rules |
 
 ## Font
 
