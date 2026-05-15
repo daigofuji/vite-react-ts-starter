@@ -5,6 +5,15 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Prevent duplicate deployments — queue rather than cancel in-progress
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+# Opt into Node.js 24 before forced migration on June 2, 2026
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 # Minimal default — deploy job overrides with what it actually needs
 permissions:
   contents: read
